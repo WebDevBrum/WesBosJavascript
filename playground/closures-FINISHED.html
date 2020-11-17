@@ -23,29 +23,34 @@
     // const innerFn = outer();
     // innerFn();
 
-    function createGreeting(greeting = '') {
+    function createGreeting(greeting = "") {
       const myGreet = greeting.toUpperCase();
       return function (name) {
         return `${myGreet} ${name}`;
-      }
+      };
     }
 
-    const sayHello = createGreeting('hello');
-    const sayHey = createGreeting('hey');
-    console.log(sayHello('wes'));
-    console.log(sayHello('kait'));
-    console.log(sayHey('kait'));
+    const sayHello = createGreeting("hello");
+    const sayHey = createGreeting("hey");
+    console.log(sayHello("wes"));
+    console.log(sayHello("kait"));
+    console.log(sayHey("kait"));
 
     function createGame(gameName) {
       let score = 0;
       return function win() {
         score++;
         return `Your name ${gameName} score is ${score}`;
-      }
+      };
     }
 
-    const hockeyGame = createGame('Hockey');
-    const soccerGame = createGame('Soccer');
+    const hockeyGame = createGame("Hockey");
+    const soccerGame = createGame("Soccer");
+
+    // hockeyGame() 'Your name hockey score is 1'
+    // hockeyGame() 'Your name hockey score is 2'
+    // hockeyGame() 'Your name hockey score is 3'
+    // etc
   </script>
 </body>
 

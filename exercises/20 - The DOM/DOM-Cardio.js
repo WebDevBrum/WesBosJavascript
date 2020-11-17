@@ -1,14 +1,38 @@
 // Make a div
-
+const superDiv = document.createElement("div");
 // add a class of wrapper to it
-
+superDiv.classList.add("wrapper");
 // put it into the body
-
+document.body.appendChild(superDiv);
 // make an unordered list
-
+// const superList = document.createElement("ul");
 // add three list items with the words "one, two, three" in them
-// put that list into the above wrapper
+// const list1 = document.createElement("li");
+// const list2 = document.createElement("li");
+// const list3 = document.createElement("li");
 
+// list1.textContent = "one";
+// list2.textContent = "two";
+// list3.textContent = "three";
+
+// superList.appendChild(list1);
+// superList.appendChild(list2);
+// superList.appendChild(list3);
+
+// SEE HOW ALL OF THIS WRITING CAN BE REDUCED BY
+
+const superUl = `
+  <ul>
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+  </ul>
+`;
+
+// put that list into the above wrapper
+superDiv.innerHTML = superUl;
+
+console.log(superDiv);
 // create an image
 
 // set the source to an image
