@@ -58,10 +58,33 @@ console.log(superImage);
 superDiv.appendChild(superImage);
 
 // with HTML string, make a div, with two paragraphs inside of it
+
+const superHtml = `
+  <div>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+  </div>`;
 // put this div before the unordered list from above
 
+const superDuperUl = document.querySelector("ul");
+
+console.log(superDuperUl);
+
+superDuperUl.insertAdjacentHTML("beforebegin", superHtml);
+
+// ANOTHER OPTION IS insertAdjacentElement THIS WILL NOT RECOGNISE THE PRE PARSED superHtml
+
 // add a class to the second paragraph called warning
+
+const pList = document.querySelectorAll("p");
+
+console.log(pList);
+
+pList[1].classList.add("warning");
+
 // remove the first paragraph
+
+pList[0].remove();
 
 // create a function called generatePlayerCard that takes in three arguments: name, age, and height
 
