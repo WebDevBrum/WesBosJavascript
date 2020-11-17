@@ -32,14 +32,30 @@ const superUl = `
 // put that list into the above wrapper
 superDiv.innerHTML = superUl;
 
-console.log(superDiv);
 // create an image
 
+const superImage = document.createElement("img");
+
 // set the source to an image
+
+superImage.setAttribute("src", "https://picsum.photos/200");
+
 // set the width to 250
+
+superImage.setAttribute("width", 250);
+
 // add a class of cute
+superImage.classList.add("cute");
+
 // add an alt of Cute Puppy
+
+superImage.setAttribute("alt", "cute puppy");
+
+console.log(superImage);
+
 // Append that image to the wrapper
+
+superDiv.appendChild(superImage);
 
 // with HTML string, make a div, with two paragraphs inside of it
 // put this div before the unordered list from above
