@@ -16,22 +16,22 @@
     const age = 100;
     const wes = {
       age,
-      name: 'wes',
-      properyToCheck: 'NEVER',
-      'cool-dude': true,
-      'really cool': false,
-      '777': true,
-      dog: 'snicker',
+      name: "wes",
+      properyToCheck: "NEVER",
+      "cool-dude": true,
+      "really cool": false,
+      777: true,
+      dog: "snicker",
       clothing: {
         shirts: 10,
-        pants: 2
+        pants: 2,
       },
-      sayHello: function (greeting = 'Hey') {
-        return `${greeting} ${this.name}`;
-      }
+      sayHello(greeting = "Hey") {
+    return `${greeting} ${this.name}`;
+  },
     };
 
-    wes.job = 'Web Developer';
+    wes.job = "Web Developer";
     wes.age = 50;
 
     console.log(wes.age);
@@ -39,37 +39,37 @@
     // console.log(properyToCheck);
     // console.log(wes[properyToCheck]);
 
-    const nameInput = document.querySelector('[name="first"]');
-    const name = nameInput ? nameInput.value : '';
+    const nameInput = document.querySelector("[name=\"first\"]");
+    const name = nameInput ? nameInput.value : "";
     console.log(name);
 
     // console.log(delete wes.job);
     // wes.age = undefined;
     // wes.age = null;
 
-    let name1 = 'wes';
-    let name2 = 'wes';
+    let name1 = "wes";
+    let name2 = "wes";
 
     console.log(name1 === name2);
-    name1 = 'scott';
+    name1 = "scott";
     console.log(name1 === name2);
     // update name1 to be what is name2
     name1 = name2;
     console.log(name1 === name2);
     name2 = name1;
-    name2 = 'westopher';
+    name2 = "westopher";
 
     const person1 = {
-      first: 'wes',
-      last: 'bos',
+      first: "wes",
+      last: "bos",
       clothing: {
         shirts: 10,
-        pants: 2
-      }
+        pants: 2,
+      },
     };
     const person2 = {
-      first: 'wes',
-      last: 'bos'
+      first: "wes",
+      last: "bos",
     };
 
     // const person3 = person1;
@@ -78,7 +78,7 @@
     // console.log(person1.first);
     // const person3 = { ...person1 };
     const person3 = _.cloneDeep(person1);
-    person3.first = 'Larry';
+    person3.first = "Larry";
 
     person3.clothing.shirts = 100;
 
@@ -100,7 +100,7 @@
     };
 
     function doStuff(data) {
-      data = 'something else';
+      data = "something else";
       console.log(data);
     }
 
@@ -110,8 +110,6 @@
     }
 
     doStuff2(inventory);
-
-
   </script>
 </body>
 
